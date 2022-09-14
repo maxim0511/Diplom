@@ -16,16 +16,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-//TODO:Настроить // "husky": {
-    //     "hooks": {
-    //         "pre-commit": "lint-staged",
-    //         "pre-push": "npm test"
-    //     }
-    // },
-  //   "lint-staged": {
-  //     "*.{ts,tsx}": [
-  //         "yarn format",
-  //         "yarn lint",
-  //         "git add *"
-  //     ]
-  // }

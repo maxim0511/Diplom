@@ -5,7 +5,7 @@ export const useTranslate = () => {
   const { t, i18n } = useTranslation()
   useEffect(() => {
     i18n.changeLanguage(
-      (localStorage ? localStorage.getItem('language') : 'ru') as Language
+      (localStorage.getItem('language') || 'ru') as Language
     )
   }, [])
   useEffect(() => {
