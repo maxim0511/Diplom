@@ -6,11 +6,11 @@ const Home: NextPage = () => {
   const { theme, onToggle } = useThemeSwitcher()
   return (
     <div className='App'>
-      <button onClick={() => onToggleLanguage('ru')}>EN</button>
+        <button onClick={() => onToggleLanguage('ru')}>EN</button>
       <button onClick={() => onToggleLanguage('en')}>RU</button>
       <div className='text-red-500'>{t('Welcome to React')}</div>
       <button onClick={onToggle}>Change theme</button>
-      {theme}
+    {theme}
     </div>
   )
 }
