@@ -4,9 +4,7 @@ import { Language } from '../types'
 export const useTranslate = () => {
   const { t, i18n } = useTranslation()
   useEffect(() => {
-    i18n.changeLanguage(
-      (localStorage.getItem('language') || 'ru') as Language
-    )
+    i18n.changeLanguage((localStorage.getItem('language') || 'ru') as Language)
   }, [])
   useEffect(() => {
     localStorage.setItem('language', i18n.language)

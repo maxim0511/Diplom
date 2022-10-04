@@ -4,7 +4,7 @@ import { THEME_DARK, THEME_LIGHT, Nullable, Theme } from 'src/shared'
 export const useThemeSwitcher = () => {
   const [theme, setTheme] = useState<Nullable<Theme>>(null)
   useEffect(() => {
-    setTheme(localStorage.getItem('theme') as Theme || 'light')
+    setTheme((localStorage.getItem('theme') as Theme) || 'light')
   }, [])
   useEffect(() => {
     const body = document.querySelector('html')

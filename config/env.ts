@@ -1,16 +1,16 @@
 import getConfig from 'next/config'
 const getEnv = (key: string) => {
-    const { publicRuntimeConfig, serverRuntimeConfig } = getConfig()
+  const { publicRuntimeConfig, serverRuntimeConfig } = getConfig()
 
-    const envVar = key.startsWith('NEXT_PUBLIC_')
-        ? publicRuntimeConfig[key]
-        : serverRuntimeConfig[key]
+  const envVar = key.startsWith('NEXT_PUBLIC_')
+    ? publicRuntimeConfig[key]
+    : serverRuntimeConfig[key]
 
-    if (!envVar && typeof window === 'undefined') {
-        throw new Error(`Env variable ${key} is required`)
-    }
+  if (!envVar && typeof window === 'undefined') {
+    throw new Error(`Env variable ${key} is required`)
+  }
 
-    return envVar
+  return envVar
 }
 export const URL = getEnv('NEXT_PUBLIC_API_TARGET_URL')
 export const CONTAINER = getEnv('NEXT_PUBLIC_CONTAINER_VERSION')
