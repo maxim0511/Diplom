@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Настроить
-# . "$(dirname -- "$0")/_/husky.sh"
+Настроить
+. "$(dirname -- "$0")/_/husky.sh"
 
-# yarn lint-staged
+yarn lint-staged
